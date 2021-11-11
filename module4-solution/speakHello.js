@@ -18,13 +18,13 @@
 // (Note, Step 6 will be done in the SpeakGoodBye.js file.)
 // xxxx.xxxx = helloSpeaker;
 
-(function(){
+(function(window){
   var speakWord = "Hello";
-  function speak(name) {
-    console.log(speakWord + " " + name);
-  }
   
-})();
-  var helloSpeaker = {
-  
+  var helloSpeaker = {};
+  helloSpeaker.speak = function(name) {
+    console.log(speakWord + " " + name );
   }
+  window.helloSpeaker = helloSpeaker;
+  
+})(window);
